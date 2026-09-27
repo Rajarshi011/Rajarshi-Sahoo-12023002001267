@@ -1,0 +1,5 @@
+email,password,expected,case
+rajat.qa.20260924@example.com,Password123,success,valid_login
+wrong@example.com,wrongpass,error,invalid_password
+notauser@example.com,Password123,error,invalid_email
+,,error,empty_credentials

@@ -1,0 +1,5 @@
+search_term,expected,case
+MacBook,valid,valid_product
+iPhone,valid,valid_product
+Canon,valid,valid_product
+zzz_nonexistent_product_zzz,invalid,no_results
