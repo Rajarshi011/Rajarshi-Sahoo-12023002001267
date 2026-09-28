@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.10.0 on win32)" generated="2026-09-27T22:02:28.568079" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Browser" source="C:\Users\rajar\Desktop\Selenium\Codes for lab work\Module - 4\Experiment 13 - Robot Framework Basics and Browser Automation\source_code\test_browser.robot">
+<kw name="Open Test Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:28.969177" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-27T22:02:28.969177" elapsed="3.146753"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-27T22:02:32.115930" elapsed="0.050721"/>
+</kw>
+<status status="PASS" start="2026-09-27T22:02:28.967155" elapsed="3.200982"/>
+</kw>
+<test id="s1-t1" name="Verify Login Page" line="14">
+<kw name="Open Login Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:32.171148" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T22:02:32.171148" elapsed="4.549918"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.722154" elapsed="0.029954"/>
+</kw>
+<status status="PASS" start="2026-09-27T22:02:32.170154" elapsed="4.581954"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:36.759940" level="INFO">Current page contains element 'id=username'.</msg>
+<arg>id=username</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.752108" elapsed="0.007832"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:36.768296" level="INFO">Current page contains element 'id=password'.</msg>
+<arg>id=password</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.759940" elapsed="0.009355"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:36.837407" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/01_login_page.png"&gt;&lt;img src="screenshots/01_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/01_login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.769295" elapsed="0.068112"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-27T22:02:36.838455" level="INFO">Login page displayed successfully.</msg>
+<arg>Login page displayed successfully.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.838455" elapsed="0.001057"/>
+</kw>
+<doc>Verify that the login page opens successfully.</doc>
+<status status="PASS" start="2026-09-27T22:02:32.168137" elapsed="4.671375"/>
+</test>
+<test id="s1-t2" name="Verify Successful Login" line="22">
+<kw name="Open Login Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:36.842407" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.841461" elapsed="0.305508"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T22:02:37.146969" elapsed="0.017420"/>
+</kw>
+<status status="PASS" start="2026-09-27T22:02:36.841461" elapsed="0.322928"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:37.165398" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T22:02:37.165398" elapsed="0.106465"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:37.272863" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T22:02:37.271863" elapsed="0.069604"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:37.431405" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/02_credentials_entered.png"&gt;&lt;img src="screenshots/02_credentials_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/02_credentials_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T22:02:37.342473" elapsed="0.088932"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:37.432405" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T22:02:37.432405" elapsed="0.644632"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You logged into a secure area!</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-27T22:02:38.078036" elapsed="0.012064"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:38.109468" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-09-27T22:02:38.090100" elapsed="0.020362"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T22:02:38.193751" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/03_successful_login.png"&gt;&lt;img src="screenshots/03_successful_login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/03_successful_login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T22:02:38.110462" elapsed="0.083835"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-27T22:02:38.194297" level="INFO">Login successful and verified.</msg>
+<arg>Login successful and verified.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-27T22:02:38.194297" elapsed="0.000000"/>
+</kw>
+<doc>Verify login using valid credentials.</doc>
+<status status="PASS" start="2026-09-27T22:02:36.840532" elapsed="1.354873"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-27T22:02:38.196305" elapsed="2.181969"/>
+</kw>
+<status status="PASS" start="2026-09-27T22:02:28.569560" elapsed="11.808714"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Browser" id="s1" pass="2" fail="0" skip="0">Test Browser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
